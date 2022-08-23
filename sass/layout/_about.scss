@@ -1,0 +1,29 @@
+.about {
+  padding-top: 94px;
+}
+.about__list {
+  display: flex;
+  gap: 30px;
+}
+.about__item {
+  background-color: #f5f4fa;
+  display: flex;
+  justify-content: center;
+  padding: 25px 70px;
+  margin-bottom: 30px;
+}
+.about__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--first-title);
+  margin-bottom: 10px;
+}
+.about__pretitle {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+}

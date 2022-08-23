@@ -1,0 +1,32 @@
+.aside {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.166;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--first-title);
+}
+.aside__item {
+  width: calc((100% - 60px) / 3);
+  position: relative;
+}
+.aside__list {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+}
+.aside__text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  padding: 27px;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+}
