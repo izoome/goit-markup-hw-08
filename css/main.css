@@ -50,7 +50,6 @@ h6 {
 
 img {
   display: block;
-  max-width: 100%;
   height: auto;
 }
 
@@ -76,12 +75,26 @@ body {
 }
 
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    background-color: rgb(133, 84, 20);
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    background-color: rgb(97, 45, 127);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    background-color: rgb(24, 137, 69);
+  }
 }
 
 .section {
@@ -235,20 +248,52 @@ body {
 }
 
 .about {
-  padding-top: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about {
+    padding-top: 94px;
+    padding-bottom: 0px;
+  }
 }
 
 .about__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
+}
+
+.about__preitem {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .about__preitem {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__preitem {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .about__item {
-  background-color: #f5f4fa;
+  height: 120px;
+  min-width: 270px;
+  border-radius: 4px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
-  padding: 25px 70px;
-  margin-bottom: 30px;
+  align-items: center;
+  background-color: #f5f4fa;
 }
 
 .about__title {
@@ -259,6 +304,8 @@ body {
   text-transform: uppercase;
   color: var(--first-title);
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .about__pretitle {
