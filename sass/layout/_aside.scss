@@ -1,19 +1,27 @@
-.aside {
+@media screen and (max-width: 1199px) {
+  .aside {
+    display: none;
+  }
+}
+
+.aside__top {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.166;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--first-title);
+  display: flex;
+  justify-content: center;
 }
+
 .aside__item {
-  width: calc((100% - 60px) / 3);
   position: relative;
 }
 .aside__list {
   display: flex;
+  justify-content: center;
   gap: 30px;
-  margin-top: 50px;
 }
 .aside__text {
   font-weight: 700;
