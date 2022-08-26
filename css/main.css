@@ -83,25 +83,21 @@ body {
 @media screen and (min-width: 320px) {
   .container {
     width: 320px;
-    background-color: rgb(195, 151, 161);
   }
 }
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
-    background-color: rgb(195, 176, 151);
   }
 }
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
-    background-color: rgb(165, 147, 176);
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
-    background-color: rgb(183, 220, 198);
   }
 }
 
@@ -255,17 +251,19 @@ body {
   color: #ffffff;
 }
 
-.about {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
 @media screen and (min-width: 768px) {
   .about {
     padding-top: 60px;
     padding-bottom: 60px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
   .about {
     padding-top: 94px;
     padding-bottom: 0px;
@@ -465,17 +463,19 @@ body {
   fill: currentColor;
 }
 
-.clients {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .clients {
     padding-top: 60px;
     padding-bottom: 60px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 480px) and (min-width: 768px) {
+  .clients {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 480px) and (min-width: 1200px) {
   .clients {
     padding-top: 94px;
     padding-bottom: 0px;
@@ -752,12 +752,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   .benefits-list > .benefits-item {
-    width: calc((100% - 30px) / 2);
+    width: calc((100% - 60px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .benefits-list > .benefits-item {
-    width: calc((100% - 90px) / 4);
+    width: calc((100% - 90px) / 3);
   }
 }
 .benefits-list > .benefits-item:hover, .benefits-list > .benefits-item:focus {
