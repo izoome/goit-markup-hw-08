@@ -1,19 +1,23 @@
 .container {
   margin: 0 auto;
   padding: 0 15px;
+  @media screen and (min-width: 320px) {
+    width: 320px;
+    background-color: rgb(195, 151, 161);
+  }
 
   @media screen and (min-width: 480px) {
     width: 480px;
-    background-color: rgb(133, 84, 20);
+    background-color: rgb(195, 176, 151);
   }
 
   @media screen and (min-width: 768px) {
     width: 768px;
-    background-color: rgb(97, 45, 127);
+    background-color: rgb(165, 147, 176);
   }
 
   @media screen and (min-width: 1200px) {
     width: 1200px;
-    background-color: rgb(24, 137, 69);
+    background-color: rgb(183, 220, 198);
   }
 }
