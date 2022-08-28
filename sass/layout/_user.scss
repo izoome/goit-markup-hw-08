@@ -15,6 +15,7 @@
   @include font(36, 1.166, 700, 0.03em);
   text-align: center;
   color: var(--first-title);
+  margin-bottom: 50px;
 }
 .user__list {
   display: flex;
