@@ -39,7 +39,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("/images/preview-bg-mobile.jpg");
+    url("../images/preview-bg-mobile.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -49,7 +49,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("/images/preview-bg-mobile-2x.jpg");
+      url("../images/preview-bg-mobile-2x.jpg");
   }
 
   @include tablet {
@@ -69,7 +69,7 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url("/images/preview-bg-tablet-2x.jpg");
+        url("../images/preview-bg-tablet-2x.jpg");
     }
   }
 
@@ -82,7 +82,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("/images/preview-bg.jpg");
+      url("../images/preview-bg.jpg");
 
     @include retina {
       background-image: linear-gradient(
@@ -90,7 +90,7 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url("/images/preview-bg-2x.jpg");
+        url("../images/preview-bg-2x.jpg");
     }
   }
 }
