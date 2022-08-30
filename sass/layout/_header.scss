@@ -1,10 +1,21 @@
 .header {
   border-bottom: #ececec solid 1px;
-  padding: 24px 0;
+  padding: 10px 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 15px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 24px 0;
+  }
+
   > .container {
     display: flex;
+    flex-basis: 100%;
   }
 }
+
 .header__link {
   position: relative;
   &::after {
@@ -20,9 +31,14 @@
   }
 }
 
-.navigation {
+.header__nav-wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-basis: 100%;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .navigation__list {
@@ -40,6 +56,7 @@
 }
 .navigation__link {
   text-decoration: none;
+
   &:hover,
   &:focus {
     color: var(--btn);
@@ -62,6 +79,8 @@
 }
 
 .navigation__logo {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   font-family: "Raleway";
   font-style: normal;
@@ -69,46 +88,73 @@
   font-size: 26px;
   line-height: 1.19;
   color: #000000;
+
   margin-right: 93px;
 }
 
 .blue-logo {
   color: var(--btn);
 }
-.contact {
-  align-items: center;
-  display: flex;
-  margin-left: auto;
-  gap: 50px;
+.contact__icon {
+  &:hover,
+  &:focus {
+    fill: var(--btn);
+  }
 }
+
 .contact__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.02em;
   color: #757575;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  transition: color 250 ease;
+
+  @include desktop {
+    display: inline-flex;
+    font-size: 14px;
+    line-height: 1.143;
+    align-items: center;
+  }
   &:hover,
   &:focus {
     color: var(--btn);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
 }
+
 .contact__icon {
   margin-right: 10px;
   fill: var(--icon-color);
 }
-// ___________
+
 .mob-menu {
   position: fixed;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: #ffffff;
   z-index: 2;
   top: 0;
-  padding: 38px 30px;
+  transform: translateX(0%);
+}
+.mob-menu .is-open {
+  transform: translateX(100%);
+  transition: transform 25ms cubic-bezier(0.2, 0, 0.2, 1) !important;
 }
 
 .menu-open {
+  display: block;
   margin-left: auto;
   border-width: 0px;
   padding: 0px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
+
 .menu-icon {
   background-color: #ffffff;
 
@@ -117,18 +163,25 @@
 }
 
 .menu-close {
-  width: 40px;
-  height: 40px;
+  padding-top: 10px;
+  right: 15px;
+
   color: #212121;
   border: none;
   background-color: #ffffff;
   display: block;
   margin-left: auto;
-  margin-bottom: 30px;
+
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: var(--btn);
+  }
 }
 .mob-menu-nav {
 }
 .mob-menu-list {
+  padding-left: 20px;
 }
 
 .mob-menu-item:not(:last-child) {
@@ -140,13 +193,23 @@
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #212121;
+
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: var(--btn);
+  }
 }
 
 .mob-connect {
+  padding-top: 402px;
 }
 .mob-connect-item {
+  display: flex;
+  flex-direction: column;
 }
 .mob-connect-link {
+  padding-left: 20px;
 }
 .mob-connect-tel {
   font-weight: 500;
@@ -155,38 +218,40 @@
   letter-spacing: 0.02em;
   color: #2196f3;
 }
+
+.mob-connect-email {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.02em;
+  color: #757575;
+
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: var(--btn);
+  }
+}
+
 .mob-connect-icon {
 }
 .mob-soc-list {
+  display: flex;
+  flex-direction: row;
 }
 .mob-soc-item {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+  margin-right: 20px;
+
+  &:not(:last-child) {
+    border-right: 1px solid #757575;
+  }
 }
 .mob-soc-link {
+  padding-right: 10px;
 }
-
-//   .mob-menu > .container {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100vw;
-//     height: 100%;
-//     padding: 38px 30px;
-//     background-color: var(--color-design-global);
-//     z-index: 999;
-//     transform: translateX(100%);
-//     transition: transform 250ms var(--cubic);
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-
-//     @include mobile {
-//       padding: 48px 40px;
-//     }
-
-//     & .menu-open {
-//       position: absolute;
-//       top: 10px;
-//       right: 15px;
-//     }
-//   }
-// }

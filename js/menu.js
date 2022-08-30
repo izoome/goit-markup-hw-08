@@ -1,7 +1,7 @@
 (() => {
   const refs = {
-    openMenuBtn: document.querySelector(".menu__open"),
-    closeMenuBtn: document.querySelector(".menu__close"),
+    openMenuBtn: document.querySelector(".menu-open"),
+    closeMenuBtn: document.querySelector(".menu-close"),
     menu: document.querySelector(".mob-menu"),
     body: document.querySelector("body"),
     menuList: document.querySelector(".mob-menu-list"),
@@ -19,5 +19,8 @@
 
   function removeMenu() {
     refs.menu.classList.add("is-hidden");
+  }
+  function toggleModal() {
+    refs.menu.classList.toggle("is-open");
   }
 })();
