@@ -8,7 +8,7 @@
   }
   @media screen and (min-width: 1200px) {
     padding-top: 94px;
-    padding-bottom: 0px;
+    padding-bottom: 94px;
   }
 }
 .user__title {
@@ -16,6 +16,9 @@
   text-align: center;
   color: var(--first-title);
   margin-bottom: 50px;
+  @media screen and (max-width: 1200px) {
+    font-size: 28px;
+  }
 }
 .user__list {
   display: flex;

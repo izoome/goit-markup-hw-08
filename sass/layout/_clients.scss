@@ -20,6 +20,9 @@
   letter-spacing: 0.03em;
   color: #212121;
   margin-bottom: 50px;
+  @media screen and (max-width: 1200px) {
+    font-size: 28px;
+  }
 }
 .clients__list {
   display: flex;

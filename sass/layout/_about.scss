@@ -47,7 +47,9 @@
   color: var(--first-title);
   margin-bottom: 10px;
   display: flex;
-  justify-content: center;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
 }
 .about__pretitle {
   font-size: 14px;
